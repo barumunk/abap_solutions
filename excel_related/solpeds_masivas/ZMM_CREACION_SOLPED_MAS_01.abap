@@ -5,7 +5,7 @@
 INCLUDE zmm_creacion_solped_mas_c00.
 
 *------------------------------------------------------------------------*
-* DISEÑO PANTALLA DE SELECCIÓN
+* DISEÃ‘O PANTALLA DE SELECCIÃ“N
 *------------------------------------------------------------------------*
 
 SELECTION-SCREEN: BEGIN OF BLOCK b1 WITH FRAME TITLE TEXT-t01.
