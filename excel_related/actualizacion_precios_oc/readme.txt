@@ -2,6 +2,11 @@ Se solicito lo siguiente:
 
 Crear un programa que permita la actualización masiva de las condiciones de cada posición de la OC.
 
+Parametros de entrada:
+
+-Proveedor
+-documento excel
+
 Desarrollos:
 
 ZMMRE_ACTUALIZA_PRECIOS_OC,
