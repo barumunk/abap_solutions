@@ -10,7 +10,7 @@ DATA : ob_catalog TYPE REF TO lcl_catalogo,
 
 
 ************************************************************************
-*  Pantalla de Selección                                               *
+*  Pantalla de SelecciÃ³n                                               *
 ************************************************************************
 SELECTION-SCREEN BEGIN OF BLOCK b1 WITH FRAME TITLE TEXT-001.
   PARAMETERS: p_file TYPE localfile OBLIGATORY.
