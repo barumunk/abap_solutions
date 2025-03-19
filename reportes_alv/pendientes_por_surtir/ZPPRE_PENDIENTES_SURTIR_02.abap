@@ -1,9 +1,7 @@
 *------------------------------------------------------------------------*
 * Programa   : zppre_pendientes_surtir                                   *
-* Descripci髇: Reporte para consultar la informaci髇 detallada           *
+* Descripci贸n: Reporte para consultar la informaci贸n detallada           *
 * de los Pendientes Restantes por surtir y sus materiales.               *
-* Solicitante: (Piagui)                                                  *
-* Analista:    (Piagui)                                                  *
 * Programador: David Navoa Acevedo                                       *
 * Fecha      : 21.10.2024                                                *
 *------------------------------------------------------------------------*
@@ -351,7 +349,7 @@ CLASS lcl_catalogo IMPLEMENTATION.
           ls_catalogo-n_destinatario = |{ ls_kna1-name1 } { ls_kna1-name2 }|.
         ENDIF.
 
-        "Mes - A駉
+        "Mes - A帽o
         IF ls_catalogo-f_entrega IS INITIAL.
           SELECT SINGLE erdat FROM vbap INTO ls_catalogo-f_entrega
             WHERE vbeln EQ ls_catalogo-doc_ventas
@@ -615,7 +613,7 @@ CLASS lcl_alv IMPLEMENTATION.
     ob_columns->set_optimize( abap_true ).
 *    ob_column->set_short_text( 'UM Base' ).
 *    ob_column->set_medium_text( 'UM Base' ).
-    ob_column->set_long_text( 'N鷐 Posici髇 Pedido' ).
+    ob_column->set_long_text( 'N煤m Posici贸n Pedido' ).
 
     ob_column ?= ob_columns->get_column( 'MAT_GEN' ).
     ob_alv->get_columns( )->set_column_position( columnname = 'MAT_GEN' ).
@@ -635,8 +633,8 @@ CLASS lcl_alv IMPLEMENTATION.
     ob_alv->get_columns( )->set_column_position( columnname = 'DESCRIPCION' ).
     ob_columns->set_optimize( abap_true ).
 *    ob_column->set_short_text( 'Producto' ).
-    ob_column->set_medium_text( 'Descripci髇' ).
-    ob_column->set_long_text( 'Descripci髇' ).
+    ob_column->set_medium_text( 'Descripci贸n' ).
+    ob_column->set_long_text( 'Descripci贸n' ).
 
     ob_column ?= ob_columns->get_column( 'TALLA' ).
     ob_alv->get_columns( )->set_column_position( columnname = 'TALLA' ).
@@ -711,16 +709,16 @@ CLASS lcl_alv IMPLEMENTATION.
     ob_column ?= ob_columns->get_column( 'S_ESPECIAL_MAT' ).
     ob_alv->get_columns( )->set_column_position( columnname = 'S_ESPECIAL_MAT' ).
     ob_columns->set_optimize( abap_true ).
-*    ob_column->set_short_text( 'Colaboraci髇' ).
-*    ob_column->set_medium_text( 'Colaboraci髇' ).
+*    ob_column->set_short_text( 'Colaboraci贸n' ).
+*    ob_column->set_medium_text( 'Colaboraci贸n' ).
     ob_column->set_long_text( 'Estatus Especial Material' ).
 
     ob_column ?= ob_columns->get_column( 'MES_ANO' ).
     ob_alv->get_columns( )->set_column_position( columnname = 'MES_ANO' ).
     ob_columns->set_optimize( abap_true ).
 *    ob_column->set_short_text( 'Subdivision' ).
-    ob_column->set_medium_text( 'Mes - A駉' ).
-    ob_column->set_long_text( 'Mes - A駉' ).
+    ob_column->set_medium_text( 'Mes - A帽o' ).
+    ob_column->set_long_text( 'Mes - A帽o' ).
 
     ob_column ?= ob_columns->get_column( 'C_PEDIDO' ).
     ob_alv->get_columns( )->set_column_position( columnname = 'C_PEDIDO' ).
@@ -813,7 +811,7 @@ CLASS lcl_alv IMPLEMENTATION.
     ob_alv->get_columns( )->set_column_position( columnname = 'F_CREACION_PED' ).
     ob_columns->set_optimize( abap_true ).
 *    ob_column->set_medium_text( 'Texto Pedido Compras' ).
-    ob_column->set_long_text( 'Fecha Creaci髇 Pedido' ).
+    ob_column->set_long_text( 'Fecha Creaci贸n Pedido' ).
 
 * Calling Set PF status method
 *    CALL METHOD m_set_pf_status
@@ -860,7 +858,7 @@ CLASS lcl_alv IMPLEMENTATION.
                     seltext_l = 'Referencia Cliente')
                     TO gt_slis_fieldcat.
     APPEND VALUE #( fieldname = 'NUM_POS_P'
-                    seltext_l = 'N鷐 Posici髇 Pedido')
+                    seltext_l = 'N煤m Posici贸n Pedido')
                     TO gt_slis_fieldcat.
     APPEND VALUE #( fieldname = 'MAT_GEN'
                     intlen    = 40
@@ -876,7 +874,7 @@ CLASS lcl_alv IMPLEMENTATION.
                     TO gt_slis_fieldcat.
     APPEND VALUE #( fieldname = 'DESCRIPCION'
                     intlen = 40
-                    seltext_l = 'Descripci髇')
+                    seltext_l = 'Descripci贸n')
                     TO gt_slis_fieldcat.
     APPEND VALUE #( fieldname = 'TALLA'
                     intlen    = 18
@@ -926,7 +924,7 @@ CLASS lcl_alv IMPLEMENTATION.
                     seltext_l = 'Estatus Especial Material')
                     TO gt_slis_fieldcat.
     APPEND VALUE #( fieldname = 'MES_ANO'
-                    seltext_l = 'Mes - A駉')
+                    seltext_l = 'Mes - A帽o')
                     TO gt_slis_fieldcat.
     APPEND VALUE #( fieldname = 'C_PEDIDO'
                     seltext_l = 'Cantidad Pedido')
@@ -973,7 +971,7 @@ CLASS lcl_alv IMPLEMENTATION.
                     seltext_l = 'Importe en Picking Retail')
                     TO gt_slis_fieldcat.
     APPEND VALUE #( fieldname = 'F_CREACION_PED'
-                    seltext_l = 'Fecha Creaci髇 Pedido')
+                    seltext_l = 'Fecha Creaci贸n Pedido')
                     TO gt_slis_fieldcat.
 
     gs_slis_layout-colwidth_optimize   = 'X'.
