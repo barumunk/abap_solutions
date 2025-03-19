@@ -3,8 +3,6 @@
 *------------------------------------------------------------------------*
 * Programa   : ZMMRE_ACTUALIZA_PRECIOS_OC                                *
 * Descripción: Reporte para cambiar precios en Orden de Compra           *
-* Solicitante: (Piagui)                                                  *
-* Analista:    (Piagui)
 * Programador: David Navoa Acevedo                                       *
 * Fecha      : 06.06.2024                                                *
 *------------------------------------------------------------------------*
