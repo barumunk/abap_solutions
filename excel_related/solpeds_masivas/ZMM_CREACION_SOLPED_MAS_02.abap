@@ -493,7 +493,7 @@ CLASS lcl_reporte IMPLEMENTATION.
     ob_alv->get_columns( )->set_column_position( columnname = 'EKORG').
     ob_columns->set_optimize( abap_true ).
     ob_column->set_medium_text( 'Org Compras' ).
-    ob_column->set_long_text( 'Organisación de Compras' ).
+    ob_column->set_long_text( 'OrganisaciÃ³n de Compras' ).
     ob_column->set_visible( value  = if_salv_c_bool_sap=>false ).
 
     ob_column ?= ob_columns->get_column( 'EKGRP' ).
