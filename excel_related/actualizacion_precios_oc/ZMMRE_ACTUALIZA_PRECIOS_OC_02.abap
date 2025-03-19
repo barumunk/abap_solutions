@@ -2,9 +2,7 @@
 *& Include          ZMMRE_ACTUALIZA_PRECIOS_OC_02
 *&---------------------------------------------------------------------*
 * Programa   : ZMMRE_ACTUALIZA_PRECIOS_OC                                *
-* Descripción: Reporte para cambiar precios en Orden de Compra           *
-* Solicitante: (Piagui)                                                  *
-* Analista:    (Piagui)
+* DescripciÃ³n: Reporte para cambiar precios en Orden de Compra           *
 * Programador: David Navoa Acevedo                                       *
 * Fecha      : 06.06.2024                                                *
 *------------------------------------------------------------------------*
@@ -88,7 +86,7 @@ CLASS lcl_catalogo IMPLEMENTATION.
         "Actualizacion de info
         LOOP AT lt_catalogo INTO ls_catalogo.
 
-          "Asignar condición a tratar en base a tipo de documento.
+          "Asignar condiciÃ³n a tratar en base a tipo de documento.
           DATA(lv_condx) = COND #( WHEN ls_catalogo-bsart = 'ZUB4' THEN 'P101' ELSE 'PB00' ).
 
           SELECT SINGLE * INTO @DATA(wa_ekko) FROM ekko
@@ -445,7 +443,7 @@ CLASS lcl_catalogo IMPLEMENTATION.
     LOOP AT lt_catalogo INTO DATA(ls_catalogo).
       ls_ebeln-ebeln = ls_catalogo-ebeln.
       APPEND ls_ebeln TO it_ebeln.
-      "Asignar condición a tratar en base a tipo de documento.
+      "Asignar condiciÃ³n a tratar en base a tipo de documento.
       DATA(lv_condx) = COND #( WHEN ls_catalogo-bsart = 'ZUB4' THEN 'P101' ELSE 'PB00' ).
     ENDLOOP.
 
