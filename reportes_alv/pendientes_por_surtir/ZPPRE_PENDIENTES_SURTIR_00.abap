@@ -1,9 +1,7 @@
 *------------------------------------------------------------------------*
 * Programa   : zppre_pendientes_surtir                                   *
-* Descripción: Reporte para consultar la información detallada           *
+* DescripciÃ³n: Reporte para consultar la informaciÃ³n detallada           *
 * de los Pendientes Restantes por surtir y sus materiales.               *
-* Solicitante: (Piagui)                                                  *
-* Analista:    (Piagui)                                                  *
 * Programador: David Navoa Acevedo                                       *
 * Fecha      : 21.10.2024                                                *
 *------------------------------------------------------------------------*
