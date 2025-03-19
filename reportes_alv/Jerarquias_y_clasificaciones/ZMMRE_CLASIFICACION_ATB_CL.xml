@@ -3,10 +3,8 @@
 *&---------------------------------------------------------------------*
 *------------------------------------------------------------------------*
 * Programa   : zmmre_clasificacion_atributos                             *
-* Descripción: Reporte para consultar la información detallada
-* del maestro del material con sus diferentes carácteristicas y atributos*
-* Solicitante: (Piagui)                                                  *
-* Analista:    (Piagui)
+* DescripciÃ³n: Reporte para consultar la informaciÃ³n detallada
+* del maestro del material con sus diferentes carÃ¡cteristicas y atributos*
 * Programador: David Navoa Acevedo                                       *
 * Fecha      : 20.11.2023                                                *
 *------------------------------------------------------------------------*
@@ -190,7 +188,7 @@ CLASS lcl_catalogo IMPLEMENTATION.
           WHERE matnr EQ @ls_mara-matnr
           AND   fsh_season IN @s_temp.
         IF sy-subrc EQ 0.
-          "Año
+          "AÃ±o
           ASSIGN COMPONENT 'YEAR' OF STRUCTURE <gs_dyntable> TO <gv_fldval>.
           <gv_fldval> = ls_seasons-fsh_season_year.
           "Temporada
@@ -215,7 +213,7 @@ CLASS lcl_catalogo IMPLEMENTATION.
               WHERE matnr EQ @ls_mara-satnr
               AND   fsh_season IN @s_temp.
             IF sy-subrc EQ 0.
-              "Año
+              "AÃ±o
               ASSIGN COMPONENT 'YEAR' OF STRUCTURE <gs_dyntable> TO <gv_fldval>.
               <gv_fldval> = ls_seasons-fsh_season_year.
               "Temporada
@@ -305,7 +303,7 @@ CLASS lcl_catalogo IMPLEMENTATION.
           lt_classes             TYPE TABLE OF ty_caracteristicas,
           lt_caract              TYPE TABLE OF ty_class.
 
-    DATA: ls_fcat     TYPE lvc_s_fcat, "área de trabajo local para el catálogo de campos
+    DATA: ls_fcat     TYPE lvc_s_fcat, "Ã¡rea de trabajo local para el catÃ¡logo de campos
           ls_fcat_aux TYPE lvc_s_fcat.
     DATA: ls_caract_aux TYPE ty_class.
     DATA: lv_tabix TYPE char5,
@@ -393,10 +391,10 @@ CLASS lcl_catalogo IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD m_create_table.
-    DATA lo_newtable TYPE REF TO data. "Para la tabla interna dinámica
+    DATA lo_newtable TYPE REF TO data. "Para la tabla interna dinÃ¡mica
     FIELD-SYMBOLS <fs_int> TYPE any.
-    "Invocamos al método 'create_dynamic_table' de la clase cl_alv_table_create
-    "Como es una clase estática accedemos directamente desde la clase al método.
+    "Invocamos al mÃ©todo 'create_dynamic_table' de la clase cl_alv_table_create
+    "Como es una clase estÃ¡tica accedemos directamente desde la clase al mÃ©todo.
     CALL METHOD cl_alv_table_create=>create_dynamic_table
       EXPORTING
         it_fieldcatalog = pt_fcat
@@ -407,7 +405,7 @@ CLASS lcl_catalogo IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD m_create_structure.
-    DATA lo_newline TYPE REF TO data. "Para el área de trabajo de la tabla interna dinámica.
+    DATA lo_newline TYPE REF TO data. "Para el Ã¡rea de trabajo de la tabla interna dinÃ¡mica.
 
     CREATE DATA lo_newline LIKE LINE OF <gt_dyntable>.
     ASSIGN lo_newline->* TO <gs_dyntable>.
@@ -598,7 +596,7 @@ CLASS lcl_catalogo IMPLEMENTATION.
 
   METHOD m_create_catalog_head.
 
-    DATA: ls_fcat TYPE lvc_s_fcat. "área de trabajo local para el catálogo de campos
+    DATA: ls_fcat TYPE lvc_s_fcat. "Ã¡rea de trabajo local para el catÃ¡logo de campos
 
     ls_fcat-fieldname = 'MAKTL'.
     ls_fcat-datatype = mara-matkl.
@@ -936,9 +934,9 @@ CLASS lcl_reporte IMPLEMENTATION.
     ob_column ?= ob_columns->get_column( 'FSH_MG_AT2' ).
     ob_alv->get_columns( )->set_column_position( columnname = 'FSH_MG_AT2' ).
     ob_columns->set_optimize( abap_true ).
-*    ob_column->set_short_text( 'Colaboración' ).
-    ob_column->set_medium_text( 'Colaboración' ).
-    ob_column->set_long_text( 'Colaboración' ).
+*    ob_column->set_short_text( 'ColaboraciÃ³n' ).
+    ob_column->set_medium_text( 'ColaboraciÃ³n' ).
+    ob_column->set_long_text( 'ColaboraciÃ³n' ).
 
     ob_column ?= ob_columns->get_column( 'FSH_MG_AT3' ).
     ob_alv->get_columns( )->set_column_position( columnname = 'FSH_MG_AT3' ).
@@ -950,9 +948,9 @@ CLASS lcl_reporte IMPLEMENTATION.
     ob_column ?= ob_columns->get_column( 'YEAR' ).
     ob_alv->get_columns( )->set_column_position( columnname = 'YEAR' ).
     ob_columns->set_optimize( abap_true ).
-    ob_column->set_short_text( 'Año' ).
-    ob_column->set_medium_text( 'Año' ).
-    ob_column->set_long_text( 'Año' ).
+    ob_column->set_short_text( 'AÃ±o' ).
+    ob_column->set_medium_text( 'AÃ±o' ).
+    ob_column->set_long_text( 'AÃ±o' ).
 
     ob_column ?= ob_columns->get_column( 'TEMPORADA' ).
     ob_alv->get_columns( )->set_column_position( columnname = 'TEMPORADA' ).
