@@ -361,7 +361,7 @@ CLASS lcl_catalogo IMPLEMENTATION.
         FROM vbak
         WHERE vbeln = @ls_data_aux-pedido.
       IF sy-subrc NE 0 AND sy-sysid NE 'DS4'.
-*** Añadir mensage tipo Return comentando que el pedido X no existe...
+*** AÃ±adir mensage tipo Return comentando que el pedido X no existe...
         CONTINUE.
       ENDIF.
 
@@ -608,7 +608,7 @@ CLASS lcl_reporte IMPLEMENTATION.
           EXPORTING
             titlebar              = 'Confirmacion'
             text_question         = 'Desea confirmar el envio de informacion?'
-            text_button_1         = 'Sí'
+            text_button_1         = 'SÃ­'
             text_button_2         = 'No'
             default_button        = '1'
             display_cancel_button = 'X'
