@@ -2,9 +2,7 @@
 *& Include          ZMMRE_ACTUALIZA_PRECIOS_OC_M00
 *&---------------------------------------------------------------------*
 * Programa   : ZMMRE_ACTUALIZA_PRECIOS_OC                                *
-* Descripción: Reporte para cambiar precios en Orden de Compra           *
-* Solicitante: (Piagui)                                                  *
-* Analista:    (Piagui)
+* DescripciÃ³n: Reporte para cambiar precios en Orden de Compra           *
 * Programador: David Navoa Acevedo                                       *
 * Fecha      : 06.06.2024                                                *
 *------------------------------------------------------------------------*
