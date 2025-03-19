@@ -3,10 +3,8 @@
 *&---------------------------------------------------------------------*
 *------------------------------------------------------------------------*
 * Programa   : zmmre_clasificacion_atributos                             *
-* DescripciÛn: Reporte para consultar la informaciÛn detallada           *
-* del maestro del material con sus diferentes car·cteristicas y atributos*
-* Solicitante: (Piagui)                                                  *
-* Analista:    (Piagui)
+* Descripci√≥n: Reporte para consultar la informaci√≥n detallada           *
+* del maestro del material con sus diferentes car√°cteristicas y atributos*
 * Programador: David Navoa Acevedo                                       *
 * Fecha      : 20.11.2023                                                *
 *------------------------------------------------------------------------*
