@@ -3,10 +3,8 @@
 *&---------------------------------------------------------------------*
 *------------------------------------------------------------------------*
 * Programa   : zmmre_clasificacion_atributos                             *
-* Descripción: Reporte para consultar la información detallada           *
-* del maestro del material con sus diferentes carácteristicas y atributos*
-* Solicitante: (Piagui)                                                  *
-* Analista:    (Piagui)
+* DescripciÃ³n: Reporte para consultar la informaciÃ³n detallada           *
+* del maestro del material con sus diferentes carÃ¡cteristicas y atributos*
 * Programador: David Navoa Acevedo                                       *
 * Fecha      : 20.11.2023                                                *
 *------------------------------------------------------------------------*
@@ -14,7 +12,7 @@
 INCLUDE zmmre_clasificacion_atb_c00.
 
 *------------------------------------------------------------------------*
-* DISEÑO PANTALLA DE SELECCIÓN
+* DISEÃ‘O PANTALLA DE SELECCIÃ“N
 *------------------------------------------------------------------------*
 
 TABLES: mara,klah, makt, t179t, maw1, wrf_fiber_codest, marm, fsh_seasons, fsh_seasons_mat.
