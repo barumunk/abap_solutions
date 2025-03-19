@@ -23,3 +23,8 @@ ZMMRE_CLASIFICACION_ATRIBUTOS,
 
 ZTT_CLAVES_CLAS,
 ZDE_DESCRIPCION
+
+Detalles de la solucion:
+
+Esta solucion es un reporte ALV orientado a objetos en lenguage ABAP. Se trabajan con estructuras y tablas dinamicas definidas por los registros encontrados, el reporte cuenta con columnas
+igualmente dinamicas.
