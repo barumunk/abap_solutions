@@ -1,7 +1,3 @@
-* Esta clase implementa la siguiente interfaz: IF_EDOC_ADAPTOR
-* Esta clase esta contenida dentro del Enhancement Implementation: ZEDOC_MX_ADAPTOR
-* Definicion de la BADI EDOC_ADAPTOR
-
   METHOD if_edoc_adaptor~set_output_data.
     FIELD-SYMBOLS: <fs_data>   TYPE edo_mx_cfdsubmit_request_type6,
                    <fs_source> TYPE edoc_src_data_sd_invoice.
@@ -9,9 +5,9 @@
     DATA: lv_xstring TYPE xstring.
 
     "Solo para Modulo SD / Invoice
-  *IF iv_edoc_type EQ 'MX_INVOICE' AND sy-uname EQ 'E_SDRLWAY'.
-   IF iv_edoc_type EQ 'MX_DELN'.
-      "BREAK-POINT.
+*    IF iv_edoc_type EQ 'MX_INVOICE' AND sy-uname EQ 'E_SDRLWAY'.
+    IF iv_edoc_type EQ 'MX_DELN' AND sy-uname EQ 'E_SDRLWAY'.
+*    IF 2 EQ 1.
 
       "Data de tablas obtenidas en el EDOC
       DATA(ld_data) = io_source->get_data_reference( ).
@@ -43,7 +39,6 @@
           <fs_data>-comprobante-comprobante-receptor-uso_cfdi = ls_knvv-kvgr2.
           <fs_data>-comprobante-comprobante-metodo_pago = ls_knvv-kvgr1.
         ENDIF.
-
 
         CALL FUNCTION 'ZSD_EDOC_CARTAPORTE'
           EXPORTING
