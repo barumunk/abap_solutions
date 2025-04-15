@@ -105,17 +105,6 @@ FUNCTION zmf_rdisponibilidad_cpar.
 
         DATA: c_transito   TYPE quan1_12.
 
-*        me->calcular_disponible( EXPORTING i_matnr = ls_mard-matnr
-*                                           i_werks = ls_mard-werks
-*                                           i_lgort = ls_mard-lgort
-*                                           i_labst = ls_mard-labst
-*                                 CHANGING  c_ordcompra = wa_alv-ordcompra
-*                                           c_pedido = wa_alv-pedido
-*                                           c_entrega = wa_alv-entrega
-*                                           c_disponible = wa_alv-disponible
-*                                           c_porcubrir = wa_alv-porcubrir
-*                                           c_transito = c_transito ).
-
         PERFORM calcular_disponible USING  ls_mard-matnr
                                            ls_mard-werks
                                            ls_mard-lgort
@@ -144,17 +133,6 @@ FUNCTION zmf_rdisponibilidad_cpar.
         wa_alv-speme =  0.
         wa_alv-ordcompra =  0.
 
-*        me->calcular_stock_esp( EXPORTING i_matnr = ls_mard-matnr
-*                                          i_werks = ls_mard-werks
-*                                          i_kunnr = wa_alv-kunnr
-*                                CHANGING  c_kulab = wa_alv-labst
-*                                          c_kuuml = wa_alv-umlme
-*                                          c_kuvin  = wa_alv-insme
-*                                          c_pedidoesp  = wa_alv-pedido
-*                                          c_entregaesp = wa_alv-entrega
-*                                          c_disponibleesp = wa_alv-disponible
-*                                           ).
-
         PERFORM calcular_stock_esp USING ls_mard-matnr
                                          ls_mard-werks
                                          wa_alv-kunnr
@@ -175,16 +153,7 @@ FUNCTION zmf_rdisponibilidad_cpar.
             CONCATENATE ls_part-name_org1 ls_part-name_org2 INTO wa_alv-partner SEPARATED BY space.
             CONDENSE wa_alv-partner.
           ENDIF.
-*          me->calcular_stock_esp( EXPORTING i_matnr = ls_mard-matnr
-*                                i_werks = ls_mard-werks
-*                                i_kunnr = wa_alv-kunnr
-*                      CHANGING  c_kulab = wa_alv-labst
-*                                c_kuuml = wa_alv-umlme
-*                                c_kuvin  = wa_alv-insme
-*                                c_pedidoesp  = wa_alv-pedido
-*                                c_entregaesp = wa_alv-entrega
-*                                c_disponibleesp = wa_alv-disponible
-*                                 ).
+
           PERFORM calcular_stock_esp USING ls_mard-matnr
                                  ls_mard-werks
                                  wa_alv-kunnr
@@ -262,17 +231,6 @@ FUNCTION zmf_rdisponibilidad_cpar.
         IMPORTING
           output = lv_matnr.
 
-
-*      me->calcular_stock_esp( EXPORTING i_matnr = wa_alv-matnr
-*                                        i_werks = wa_alv-werks
-*                                        i_kunnr = wa_alv-kunnr
-*                              CHANGING  c_kulab = wa_alv-labst
-*                                        c_kuuml = wa_alv-umlme
-*                                        c_kuvin  = wa_alv-insme
-*                                        c_pedidoesp  = wa_alv-pedido
-*                                        c_entregaesp = wa_alv-entrega
-*                                        c_disponibleesp = wa_alv-disponible ).
-
       PERFORM calcular_stock_esp USING wa_alv-matnr
                                        wa_alv-werks
                                        wa_alv-kunnr
@@ -293,15 +251,6 @@ FUNCTION zmf_rdisponibilidad_cpar.
           CONCATENATE ls_partner-name_org1 ls_partner-name_org2 INTO wa_alv-partner SEPARATED BY space.
           CONDENSE wa_alv-partner.
         ENDIF.
-*        me->calcular_stock_esp( EXPORTING i_matnr = wa_alv-matnr
-*                                i_werks = wa_alv-werks
-*                                i_kunnr = wa_alv-kunnr
-*                      CHANGING  c_kulab = wa_alv-labst
-*                                c_kuuml = wa_alv-umlme
-*                                c_kuvin  = wa_alv-insme
-*                                c_pedidoesp  = wa_alv-pedido
-*                                c_entregaesp = wa_alv-entrega
-*                                c_disponibleesp = wa_alv-disponible ).
 
         PERFORM calcular_stock_esp USING wa_alv-matnr
                                          wa_alv-werks
